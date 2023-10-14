@@ -1,0 +1,11 @@
+export API_KEY=
+export PROJECT_ID=
+
+gsutil mb gs://$PROJECT_ID
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+gcloud storage objects update gs://$PROJECT_ID/donuts.png --add-acl-grant=entity=AllUsers,role=READER
+gcloud storage objects update gs://$PROJECT_ID/selfie.png --add-acl-grant=entity=AllUsers,role=READER
+gcloud storage objects update gs://$PROJECT_ID/city.png --add-acl-grant=entity=AllUsers,role=READER
